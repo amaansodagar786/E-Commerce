@@ -387,7 +387,7 @@ const handleIncreaseQuantity = async (productId, quantity) => {
     }
 
     if (quantity < 10){
-      const response = await fetch('https://e-commerce-vert-iota.vercel.app/increase-quantity', {
+      const response = await fetch('hhttps://updated-backend-brown.vercel.app/increase-quantity', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
