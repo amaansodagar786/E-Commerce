@@ -14,7 +14,7 @@ const MyContextProvider = ({children}) => {
     useEffect(() => {
       setIsLoading(true);
   
-      axios.get('https://e-commerce-vert-iota.vercel.app/api')
+      axios.get('https://updated-backend-brown.vercel.app/api')
           .then((res) => {
               if (res.data.success) {
                   setData(res.data.data);
@@ -306,7 +306,7 @@ useEffect(() => {
         return;
       }
 
-      const response = await fetch('https://e-commerce-vert-iota.vercel.app/add-to-cart', {
+      const response = await fetch('https://updated-backend-brown.vercel.app/add-to-cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -348,7 +348,7 @@ const removeProductFromCart = async (productId) => {
       return;
     }
 
-    const response = await fetch('https://e-commerce-vert-iota.vercel.app/remove-from-cart', {
+    const response = await fetch('https://updated-backend-brown.vercel.app/remove-from-cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -429,7 +429,7 @@ const handleDecreaseQuantity = async (productId, quantity) => {
     }
 
     if (quantity > 1) {
-      const response = await fetch('https://e-commerce-vert-iota.vercel.app/decrease-quantity', {
+      const response = await fetch('https://updated-backend-brown.vercel.app/decrease-quantity', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -479,7 +479,7 @@ const handleWish = async (productId,productname,productimg,productprice) => {
       return;
     }
 
-    const response = await fetch('https://e-commerce-vert-iota.vercel.app/add-to-wish', {
+    const response = await fetch('https://updated-backend-brown.vercel.app/add-to-wish', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -515,7 +515,7 @@ const removeProductFromWish = async (productId) => {
       return;
     }
 
-    const response = await fetch('https://e-commerce-vert-iota.vercel.app/remove-from-wish', {
+    const response = await fetch('https://updated-backend-brown.vercel.app/remove-from-wish', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -552,7 +552,7 @@ useEffect(() => {
         return;
       }
 
-      const response = await fetch('https://e-commerce-vert-iota.vercel.app/get-user-address', {
+      const response = await fetch('https://updated-backend-brown.vercel.app/get-user-address', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -601,7 +601,7 @@ const [selectedSize, setSelectedSize] = useState('');
           return;
         }
   
-        const response = await fetch('https://e-commerce-vert-iota.vercel.app/trackinfo', {
+        const response = await fetch('https://updated-backend-brown.vercel.app/trackinfo', {
           method: 'GET',
           headers: { Authorization: `Bearer ${token}` },
         });

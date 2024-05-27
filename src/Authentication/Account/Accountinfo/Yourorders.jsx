@@ -21,7 +21,7 @@ const YourOrders = () => {
           return;
         }
 
-        const response = await axios.get('https://e-commerce-vert-iota.vercel.app/yourorders', {
+        const response = await axios.get('https://updated-backend-brown.vercel.app/yourorders', {
           headers: { Authorization: `Bearer ${token}` },
         });
 

@@ -55,7 +55,7 @@ const Youraddress = () => {
   // ON CLICK ON DONE ICON AFTER CHANGE
   const handleSaveChanges = async () => {
     try {
-      const response = await axios.post('https://e-commerce-vert-iota.vercel.app/save-shipping-info', {
+      const response = await axios.post('https://updated-backend-brown.vercel.app/save-shipping-info', {
         shippingInfo: {
           name: updatedName,
           email: updatedEmail,
@@ -85,7 +85,7 @@ const Youraddress = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('https://e-commerce-vert-iota.vercel.app/api/user', {
+        const response = await axios.get('https://updated-backend-brown.vercel.app/api/user', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(response.data);
