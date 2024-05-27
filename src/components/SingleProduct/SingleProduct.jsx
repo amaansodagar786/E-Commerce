@@ -13,7 +13,7 @@ import RelatedProduct from "../Category/RelatedProduct/RelatedProduct";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useContext, useEffect, useState } from "react";
 import MyContext from "../../Uttis/MyContext";
-import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
+import { AiFillHeart, AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
 import StarRating from "../StarRating/StarRating";
 
 const SingleProduct = () => {
@@ -134,7 +134,7 @@ const SingleProduct = () => {
                             className="heart"
                             onClick={() => removeProductFromWish(Item.id)}
                           >
-                            <AiTwotoneHeart />
+                            <AiFillHeart/>
                           </span>
                         ) : (
                           <span
