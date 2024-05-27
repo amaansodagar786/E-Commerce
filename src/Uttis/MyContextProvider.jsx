@@ -47,6 +47,7 @@ const MyContextProvider = ({children}) => {
   const handleBuy = (Item) => {
     // Check if the user is authenticated before navigating to checkout
     if (token) {
+      handleZero()
       setCartValue(Item)
       Navigate('/checkout');
     } else {
@@ -56,6 +57,7 @@ const MyContextProvider = ({children}) => {
   };
 
 const AddToPrice = (Total) =>{
+  handleZero();
   setCartValue(Total)
   closeModal2()
   Navigate('/checkout');
@@ -158,6 +160,13 @@ const AddToPrice = (Total) =>{
     const handlePrev = () => {
       setCurrentStep((prevStep) => prevStep - 1);
     };
+    const handleZero = () => {
+      setCurrentStep(0);
+    };
+
+   
+
+
 
     
 
@@ -219,7 +228,7 @@ useEffect(() => {
         return;
       }
 
-      const response = await fetch('http://localhost:3034/api/user', {
+      const response = await fetch('https://updated-backend-brown.vercel.app/api/user', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();

@@ -87,7 +87,7 @@ const [modalOpen,setModalOpen] = useState(false)
       try {
         
      
- const response = await fetch('http://localhost:3034/login',{
+ const response = await fetch('https://updated-backend-brown.vercel.app/login',{
 
  method: 'POST',
  headers: {
@@ -191,7 +191,7 @@ setLoader(true)
 try {
   
 
- const response =  await fetch("http://localhost:3034/register",{
+ const response =  await fetch("https://updated-backend-brown.vercel.app/register",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -265,7 +265,7 @@ setLoader(true)
 try {
   
 
- const response =  await fetch("http://localhost:3034/forgotpass",{
+ const response =  await fetch("https://updated-backend-brown.vercel.app/forgotpass",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
