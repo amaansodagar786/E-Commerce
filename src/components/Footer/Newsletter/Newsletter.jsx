@@ -55,7 +55,7 @@ const Newsletter = ({ setLoader }) => {
       try {
 
 
-        const response = await fetch("https://e-commerce-vert-iota.vercel.app/newlater", {
+        const response = await fetch("https://updated-backend-brown.vercel.app/newlater", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

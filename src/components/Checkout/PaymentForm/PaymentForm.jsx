@@ -50,7 +50,7 @@ const PaymentForm = () => {
       }
 
       if (orderdetails) {
-        fetch('https://e-commerce-vert-iota.vercel.app/orderdetails', {
+        fetch('https://updated-backend-brown.vercel.app/orderdetails', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
