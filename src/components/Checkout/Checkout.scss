@@ -1,0 +1,183 @@
+/* Checkout.css */
+@import "../../css-config/mixins.scss";
+
+
+   
+  
+
+
+// .layer-checkout{
+//     background-color:white;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+
+// }
+
+
+.checkout-main{
+display: flex;
+justify-content: center;
+gap: 50px;
+flex-flow: wrap;
+
+    margin: 40px auto;
+    padding: 40px 10px;
+   
+
+    @include md{
+        padding: 40px 30px;
+   
+    }
+
+    .checkout-container {
+        max-width: 600px;
+      
+        padding: 40px 10px;
+        border: 1px solid #ddd;
+        // background-color: rgb(231, 227, 235);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+        @include md{
+            padding: 40px 20px;
+        }
+
+        @include formp{
+width: 100%;
+        }
+      
+    
+    }
+
+    
+    .checkout-price {
+  width: 100%;
+        height:fit-content;
+        padding: 5px 10px;
+        line-height: 50px;
+        font-size: 14px;
+
+        @include md{
+            min-width: 400px;
+            padding: 5px 30px;
+            max-width: 300px;
+        }
+
+    
+      
+       
+        border: 1px solid #ddd;
+        // background-color: rgb(231, 227, 235);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        h1{
+            border-bottom: 1px solid #ddd;
+            color: rgba(0, 0, 0, 0.6);
+            padding: 8px 0;
+            font-size: 24px;
+        }
+
+        .total-value{
+
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            
+
+            span{
+                &:nth-child(1){
+                    font-weight: 900;
+                    font-size: 17px;
+                   
+                }
+    
+                &:nth-child(2){
+                   text-align: right;
+                    font-size: 19px;
+                    color: blue;
+                  
+                }
+            }
+
+        
+
+            
+        }
+
+        .delivery-charge{
+            border-bottom: 1px solid #ddd;
+
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+
+            
+
+            span{
+                &:nth-child(1){
+                    font-weight: 900;
+                    font-size: 17px;
+                   
+                }
+    
+                &:nth-child(2){
+                   text-align: right;
+                    font-size: 19px;
+                    color: blue;
+                  
+                }
+            }
+
+        
+
+            
+        }
+
+        .paid-charge{
+
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            
+
+            span{
+                &:nth-child(1){
+                    font-weight: 900;
+                    font-size: 22px;
+                    color: blue;
+
+                }
+    
+                &:nth-child(2){
+                   text-align: right;
+                    font-size: 22px;
+                    color: green;
+                    font-weight: 900;
+                  
+                }
+            }
+
+        
+
+            
+        }
+
+
+        
+    
+      
+      
+    
+    }
+}
+
+    
+
+
+  
+  /* Additional styling for form elements goes here */
+  

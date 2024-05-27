@@ -1,0 +1,102 @@
+
+.main-account{
+    
+    margin: 20px auto;
+    // background-color: aqua;
+    padding: 10px;
+
+
+.dashboard-container {
+  display: flex;
+  row-gap: 10px;
+  // background-color: aliceblue;
+  // width: 70%;
+  justify-content: space-around;
+  flex-flow: wrap;
+  padding: 20px 0;
+  
+}
+
+
+
+.dashboard-item {
+  width: fit-content;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+
+  h2 {
+    font-size: 15px;
+   
+
+  }
+
+  .icon {
+    font-size: 30px; /* Adjust icon size as needed */
+   
+   
+  }
+
+  // Add more styling as needed
+}
+.maindiv {
+  // width: 60%; /* Adjust width as needed */
+ width: fit-content;
+  height: fit-content;
+  // height: 300px; /* Adjust height as needed */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 10px auto;
+  padding: 10px;
+  
+ 
+
+}
+.dashboard-item.active {
+  background-color: #cfcece6d; /* Example background color for active item */
+  
+}
+
+
+@media screen and (max-width: 767px) {
+  /* CSS rules specific to mobile devices */
+  .dashboard-container h2 
+  {
+    font-size: 10px;
+ 
+  }
+  .dashboard-item
+  {
+    // width: 27%;
+    gap: 20px;
+  }
+ 
+}
+
+/* Media query for tablets */
+@media screen and (min-width: 766px) and (max-width: 1023px) {
+  /* CSS rules specific to tablets */
+  .dashboard-container h2 
+  {
+    font-size: 12px;
+   
+  }
+  
+}
+
+
+}
+  // Add more styling as needed
+
+  

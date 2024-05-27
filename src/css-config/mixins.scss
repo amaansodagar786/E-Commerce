@@ -1,0 +1,201 @@
+@mixin btn{
+   
+       
+        background: #8e2de2;
+       
+        color: rgb(255, 255, 255);
+        border: 0.5px solid rgba(0, 0, 0, 0.285);
+        border-radius: 0.625em;
+        font-size: 16px;
+        padding: 10px 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        margin: 0 auto;
+     
+       
+       &:hover {
+        color: rgb(255, 255, 255);
+       }
+       
+       &:after {
+        content: "";
+        background: rgb(0, 0, 0);
+        position: absolute;
+        z-index: -1;
+        left: -20%;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        transform: skewX(-45deg) scale(0, 1);
+        transition: all 0.5s;
+       }
+       
+       &:hover:after {
+        transform: skewX(-45deg) scale(1, 1);
+        -webkit-transition: all 0.5s;
+        transition: all 0.6s;
+       }
+    
+}
+
+
+
+@mixin sm {
+    @media only screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin cardmd {
+    @media only screen and (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin product {
+    @media only screen and (min-width: 1230px) {
+        @content;
+    }
+}
+
+@mixin productlap {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mdd {
+    @media only screen and (min-width: 838px) {
+        @content;
+    }
+}
+
+@mixin ml {
+    @media only screen and (min-width: 970px){
+        @content;
+    }
+}
+
+
+
+@mixin lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin lgg {
+    @media only screen and (min-width: 2024px) {
+        @content;
+    }
+}
+
+@mixin s {
+    @media only screen and (min-width: 590px) {
+        @content;
+    }
+}
+
+@mixin me {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin xxxs {
+    @media only screen and (min-width: 400px) {
+        @content;
+    }
+}
+
+@mixin cardf {
+    @media only screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin ss {
+    @media only screen and (max-width: 640px) {
+        @content;
+    }
+}
+
+
+@mixin payment {
+    @media only screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin sx{
+    @media only screen and (max-width: 592px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media only screen and (max-width: 450px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin xsx{
+    @media only screen and (max-width:386px){
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media only screen and (min-width: 1536px) {
+        @content;
+    }
+}
+
+@mixin ssms {
+    @media only screen and (max-width: 1058px) {
+        @content;
+    }
+
+}
+
+@mixin inps {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+
+    
+
+}
+
+@mixin ssmi {
+    @media only screen and (max-width: 1058px) and (min-width: 768px) {
+        @content;
+    }
+
+
+}
+
+@mixin formp {
+    @media only screen and (max-width: 950px) {
+        @content;
+    }
+
+}

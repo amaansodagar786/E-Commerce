@@ -1,0 +1,127 @@
+@import "../../../css-config/mixins.scss";
+.search-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
+    .form-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+        border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        @include md {
+            padding: 20px 0;
+        }
+        input {
+            width: 100%;
+            max-width: 1200px;
+            height: 40px;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 600;
+            color: #212121;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            @include md {
+                height: 40px;
+                font-size: 28px;
+               
+            }
+            &::placeholder {
+                color: #1005e0a1;
+                
+                
+            }
+        }
+        .close-btn {
+            position: absolute;
+            font-size: 25px;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            @include md {
+                right: 40px;
+                font-size: 40px;
+
+                @include md{
+                    transition: transform 0.5s;
+                   
+
+                   
+                }
+            }
+        }
+    }
+    .search-result-content {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 800px;
+        }
+        .start-msg {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .search-results {
+            height: calc(100vh - 110px);
+            overflow: auto;
+            margin: 20px 0;
+            @include md {
+                height: calc(100vh - 160px);
+            }
+            .search-result-item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 0;
+                // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                width: 100%;
+             
+                
+                    // overflow: hidden;
+                    .name {
+                        // text-overflow: ellipsis;
+                        // white-space: nowrap;
+                        // overflow: hidden;
+                      
+                        font-size: 16px;
+                        line-height: 20px;
+                        // margin-bottom: 10px;
+                        font-weight: 600;
+                        // display: block;
+                        padding: 8px 12px;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.374);
+                        width: 100%;
+
+                        &:hover{
+                            background-color: rgba(0, 0, 0, 0.1);
+                        }
+                        
+                    }
+                  
+                }
+            }
+        
+    }
+}
+
+@keyframes slideSearchWindow {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

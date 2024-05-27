@@ -1,0 +1,49 @@
+
+@import '../../css-config/mixins.scss';
+.contact {
+  margin: 40px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-width: 500px;
+
+  @include xxxs{
+    margin: 40px auto;
+  }
+
+
+  .contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+   gap: 20px;
+ width: 100%;
+ background-color: #cccccc23;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  
+    border-radius: 10px;
+    padding: 10px;
+
+  
+
+     
+      
+      
+     
+    
+
+      h2 {
+     margin: 20px 0;
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+    
+    }
+  }
+
+

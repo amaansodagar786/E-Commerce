@@ -1,0 +1,27 @@
+// YourAccount.scss
+
+.your-account-container {
+   margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+   
+
+
+    .account-main-head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2{
+            margin: 20px 0;
+        }
+    }
+   
+
+    
+   
+}
+

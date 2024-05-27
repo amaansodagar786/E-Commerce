@@ -1,0 +1,179 @@
+@import "../../css-config/mixins.scss";
+
+.category-container {
+    margin: 20px auto;
+    position: relative;
+
+    &:hover .card-description {
+        transform: translateY(0);
+        // display: flex;
+        opacity: 1;
+
+    }
+
+    .product-content {
+        background-color: #f7fafc;
+        /* Light background color */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2d3748;
+            /* Dark text color */
+        }
+
+        .product-price-deleted {
+            color: rgba(0, 0, 0, 0.5);
+            text-decoration: line-through;
+            font-size: 15px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #4a5568;
+            /* Gray text color */
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+
+    .product-page {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.1);
+        /* Light background color */
+        overflow: hidden;
+        cursor: pointer;
+        height: auto;
+
+        .carousel .control-dots {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 5px 8px !important;
+            padding: 0;
+            text-align: left !important;
+            width: fit-content !important;
+            height: fit-content !important;
+            z-index: 1;
+        }
+
+        .carousel .control-dots .dot {
+            transition: opacity 0.3s ease-in;
+            opacity: .3;
+            filter: alpha(opacity=30);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+            background: #717070;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 3px;
+        }
+
+        .carousel .control-dots .dot.selected,
+        .carousel .control-dots .dot:hover {
+            opacity: 1;
+            width: 14px;
+            background: #ffffff;
+            border-radius: 10px;
+            filter: alpha(opacity=100);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .heart {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #05050572;
+            /* Light gray color */
+
+            svg {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .card-description {
+        transform: translateY(100%);
+        position: absolute;
+        gap: .5em;
+        background-color: #3d4fb35a;
+        color: #212121;
+        height: 40%;
+        width: 100%;
+        bottom: 0;
+        // border-radius: 16px;
+        padding: 1rem;
+        display: flex;
+        // display:  none;
+        opacity: 0;
+
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        transition: transform 0.5s ease;
+    }
+
+    .newbtn{
+        height: 30px;
+        background-color: #8e2de2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+        cursor: pointer;
+        // @include btn ;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+
+        &:hover {
+            color: rgb(255, 255, 255);
+           }
+           
+
+        &:after {
+            content: "";
+            background: rgb(0, 0, 0);
+            position: absolute;
+            z-index: -1;
+            left: -20%;
+            right: -20%;
+            top: 0;
+            bottom: 0;
+            transform: skewX(-45deg) scale(0, 1);
+            transition: all 0.5s;
+        }
+
+        &:hover:after {
+            transform: skewX(-45deg) scale(1, 1);
+            -webkit-transition: all 0.5s;
+            transition: all 0.6s;
+        }
+
+
+    }
+}

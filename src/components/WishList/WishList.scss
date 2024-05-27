@@ -1,0 +1,258 @@
+@import "../../css-config/mixins.scss";
+
+
+body.modal-open {
+    overflow: hidden;
+  }
+
+.wish-model{
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+    .opac-layer{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        // z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .wish-content{
+        
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+        animation: openwish 0.5s;
+
+        @include md{
+            overflow-y: scroll;
+        }
+
+        .close{
+           position: absolute;
+          right:30px;
+          top: 30px;
+          
+           
+           font-size: 44px;
+           cursor: pointer;
+
+          
+        }
+
+        .wish-center{
+
+        //   margin: 80px 10px;
+          overflow-y: scroll;
+          height: 80vh;
+        //   background-color: rgba(0,0,0,0.5);
+          
+          
+          
+            padding: 30px 10px;
+            width: fit-content;
+
+            @include md{
+                // margin: 80px auto;
+                // margin: 30px auto;
+                padding: 0 16px;
+                overflow: visible;
+         
+            }
+
+            .no-wish{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                
+
+                .empty-wish{
+                    font-size: 120px;
+                    color:rgba(0,0,0,0.5);
+                }
+
+                .empty-text{
+                    font-size: 24px;
+                    line-height: 30px;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+                    @include md{
+                        font-size: 34px;
+                    }
+                }
+
+            }
+          
+           
+            
+           
+
+
+        
+
+
+        .wish-product{
+            padding: 10px 0px;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+            gap: 20px;
+            display: flex;
+            justify-content: center;
+           
+
+            @include md{
+                justify-content: space-between;
+                padding: 20px 15px;
+                gap: 30px;
+                @include md{
+                    &:hover{
+                        background-color:rgba(0,0,0,0.05) ;
+                     }
+                }
+            }
+            .img-container{
+                background-color:rgba(0,0,0,0.5);
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+
+                @include md{
+                    width: 80px;
+                    height: 100px;
+                }
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+
+            .delete{
+                cursor: pointer;
+                justify-self: right;
+                align-self: center;
+                font-size: 25px;
+                transition: 0.5s;
+                height: fit-content;
+                width: fit-content;
+                padding: 4px;
+
+                @include md{
+                    font-size: 30px;
+                    &:hover{
+                        color: red;
+                        border-radius: 100%;
+                       background-color: black;
+                    }
+                }
+               
+
+               
+               }
+    
+            .prod-details{
+                overflow: hidden;
+                position: relative;
+
+              
+                .name{
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-size: 16px;
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    display: block;
+                    padding-right: 25px;
+                    width: 170px;
+             
+                   
+
+                    @include md{
+                        width: auto;
+
+                    }
+                    
+                }
+
+                .move-cart{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 8px;
+                    cursor: pointer;
+                    color: rgba(0,0,0,0.8);
+                    border: 1px solid rgba(0,0,0,0.5);
+                    width: fit-content;
+                    padding: 3px 6px;
+
+                    @include md{
+                        transition: 0.4s ease-in;
+                        &:hover{
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+
+                
+                }
+
+                .sizebtn {
+                    display: flex;
+                    gap: 10px;
+                    background-color: white;
+                    color: black;
+
+                    
+
+
+                    button {
+                        border: 1px solid black;
+                        color: black;
+                    }
+                }
+             
+             
+    
+              
+    
+    
+            }
+    
+          
+    
+        }
+
+    }
+
+    }
+
+
+}
+
+
+@keyframes openwish{
+    0%{ transform: scale(0)}
+    100%{ transform: scale(1);}
+}

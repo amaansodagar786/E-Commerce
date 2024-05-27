@@ -1,0 +1,203 @@
+@import "../../css-config/mixins.scss";
+
+
+@keyframes changebgcolor {
+    0% { 
+        background-color: rgba(0, 0, 0, 0.936); 
+  
+     } 
+     
+    100% {
+         background-color: black;  
+        } 
+}
+
+@keyframes moving {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-20px);}
+  
+    100%{transform: translateX(20px);}
+    
+
+}
+
+.main-header{
+    width: 100%;
+    padding: 0 20px;
+    background-color:  rgba(0, 0, 0, 0.922);
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    animation: changebgcolor 1s ease-in 2s forwards;
+    z-index: 99; 
+    
+    @include md{
+        padding: 0 40px
+    }
+    
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include md {
+            height: 80px;
+            
+        }
+        .left{
+            // font-size: 22px;
+            // color: rgb(255, 255, 255);
+            // font-weight: 700;
+            width: 19%;
+            // margin: auto;
+            cursor: pointer;
+          
+            // width: auto;
+
+            @include md{
+                // height: 160px;
+                width: 8%;
+            }
+
+            img{
+                height: auto;
+                display: block;
+                width: 100%;
+                user-select: none;
+              
+            }
+            
+           
+
+            
+
+           
+
+        }
+
+        .center{
+            position: absolute;
+            display: none;
+           
+              left: 50%;
+                transform: translateX(-50%);
+                
+             
+
+            @include md{
+                display: block;
+                font-size: 1.5em;
+                font-family:monospace;
+                text-transform: uppercase;
+                font-weight: 900;
+                color: rgba(255, 255, 255, 0.3);
+                background: #222 -webkit-gradient(
+                    linear,
+                    left top,
+                    right top,
+                    from(#222),
+                    to(#222),
+                    color-stop(0.5, #fff)
+                  ) 0 0 no-repeat;
+                background-image: -webkit-linear-gradient(
+                  -40deg,
+                  transparent 0%,
+                  transparent 40%,
+                  #fff 50%,
+                  transparent 60%,
+                  transparent 100%,
+               
+                );
+                -webkit-background-clip: text;
+                -webkit-background-size: 50px;
+                -webkit-animation: zezzz;
+                -webkit-animation-duration: 5s;
+                -webkit-animation-iteration-count: infinite;
+            }
+            @keyframes zezzz {
+                0%,
+                10% {
+                  background-position: -200px;
+                }
+                20% {
+                  background-position: top left;
+                }
+                100% {
+                  background-position: 235px;
+                }
+              }
+         }
+
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include md{
+                gap:25px
+            }
+
+            span{
+                font-size: 17px;
+                cursor: pointer;
+                @include md{
+                    font-size: 20px;
+                    transition: transform .5s;
+
+                    &:hover{
+                        transform: matrix(1.2, 0, 0, 1, 0, 0);
+                        color: rgba(228, 229, 220, 0.808)
+                       
+                        
+                    }
+                }
+            }
+
+            svg{
+                font-size: 20px;
+                cursor: pointer;
+                @include md{
+                    font-size: 24px;
+                    transition: transform .5s;
+
+                    &:hover{
+                        transform: matrix(1.2, 0, 0, 1, 0, 0);
+                        color: rgba(228, 229, 220, 0.808)
+                       
+                        
+                    }
+                }
+            }
+            .cart-icon{
+                position: relative;
+                span{
+                    min-width: 20px;
+                    text-align: center;
+                    background-color: #8e2de2;
+                    padding: 2.5px;
+                    position: absolute;
+                    top: -5px;
+                    right: -12px;
+                    font-size: 12px;
+                    line-height: 1;
+                    border-radius: 10px;
+                }
+            }
+
+        }
+    }
+
+    &.sticky-header{
+        position: sticky;
+        top: 0;
+        animation: stickyHeader 0.3s ease forwards;
+        background-color: black;
+    }
+}
+
+@keyframes stickyHeader{
+    0% {transform:translateY(-80px);}
+    100%{transform: translateY(0);}
+}
+
+

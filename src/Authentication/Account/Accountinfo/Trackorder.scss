@@ -1,0 +1,28 @@
+
+
+.horizontal-stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .stepper-container {
+      width: 50%;
+      margin-bottom: 20px;
+  
+      .MuiStepIcon-root.MuiStepIcon-active {
+        color: #007bff;
+      }
+  
+      .MuiStepIcon-root.MuiStepIcon-completed {
+        color: #28a745;
+      }
+    }
+  
+    .step-actions {
+      margin-top: 20px;
+  
+      button {
+        margin-right: 10px;
+      }
+    }
+  }

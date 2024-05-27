@@ -1,0 +1,69 @@
+.container-order {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .order-items {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+
+        .order-item {
+            display: flex;
+            border: 1px solid #ddd;
+            padding: 10px;
+            justify-content: space-around;
+            align-items: center;
+            transition: all 0.3s ease-in;
+
+            &:hover{
+                background-color: rgba(0,0,0,0.1);
+            }
+
+            img {
+                max-width: 10%;
+                height: auto;
+            }
+        }
+    }
+}
+.head
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     margin-top: 10px;
+}
+
+.horizontal-stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .stepper-container {
+      width: 50%;
+      margin-bottom: 20px;
+  
+      .MuiStepIcon-root.MuiStepIcon-active {
+        color: #007bff;
+      }
+  
+      .MuiStepIcon-root.MuiStepIcon-completed {
+        color: #28a745;
+      }
+    }
+  
+    .step-actions {
+      margin-top: 20px;
+  
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+  

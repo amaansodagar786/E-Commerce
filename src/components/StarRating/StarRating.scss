@@ -1,0 +1,17 @@
+@import "../../css-config/mixins.scss";
+.star-rating {
+    display: inline-block;
+    font-size: 1.1rem;
+
+    @include md{
+      font-size: 1.5rem;
+    }
+  
+    span {
+      color: #f1c207; // Gold color for filled stars
+      
+      
+  
+    
+    }
+  }
