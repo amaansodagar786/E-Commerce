@@ -50,7 +50,7 @@ const UpdatedForm = ({ editMode }) => {
             return;
           }
     
-          const response = await fetch('http://localhost:3034/save-shipping-info', {
+          const response = await fetch('https://e-commerce-vert-iota.vercel.app/save-shipping-info', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

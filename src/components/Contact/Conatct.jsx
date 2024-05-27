@@ -52,7 +52,7 @@ const {message,setMessage} = useContext(MyContext)
     try {
       
    
-      const response = await fetch('http://localhost:3034/contact', {
+      const response = await fetch('https://e-commerce-vert-iota.vercel.app/contact', {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {

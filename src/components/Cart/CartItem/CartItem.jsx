@@ -49,7 +49,7 @@ const CartItem = () => {
               return;
             }
     
-            const response = await fetch('http://localhost:3034/cart', {
+            const response = await fetch('https://e-commerce-vert-iota.vercel.app/cart', {
   headers: { Authorization: `Bearer ${token}` }
 });
     

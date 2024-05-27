@@ -54,7 +54,7 @@ const WishList = () => {
           return;
         }
 
-        const response = await fetch('https://vhx.vercel.app/wish', {
+        const response = await fetch('https://e-commerce-vert-iota.vercel.app/wish', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
