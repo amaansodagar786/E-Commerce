@@ -24,19 +24,18 @@ const Footer = () => {
 
         <div className="c-item">
             <FaLocationArrow/>
-            <div className="text">202,kunal complex
-             nizampura,vadodara-390002</div>
+            <div className="text">Address</div>
         </div>
 
         <div className="c-item">
             <FaMobileAlt/>
-            <div className="text">+931 605 1171</div>
+            <div className="text">Number</div>
         </div>
        
 
         <div className="c-item">
             <FaEnvelope/>
-            <div className="text">veeragraval@v-extechsolution.in</div>
+            <div className="text">Email</div>
         </div>
         </div>
 
@@ -66,7 +65,7 @@ const Footer = () => {
     <div className="bottom-bar">
         <div className="bottom-bar-content">
             <div className="text">
-                VRX View 2023 CREATED BY VEER.PREMIUM E-COMERCE SOLUTION.
+                VRX View 2023. PREMIUM E-COMERCE SOLUTION.
             </div>
             <img src={Payment} alt=""/>
         </div>

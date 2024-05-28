@@ -23,6 +23,7 @@ import Youraccount from "./Authentication/Account/Accountinfo/Youraccount";
 import Yourorders from "./Authentication/Account/Accountinfo/Yourorders";
 import Youraddress from "./Authentication/Account/Accountinfo/Youraddress";
 import Trackorder from "./Authentication/Account/Accountinfo/Trackorder";
+import Forgotpass from "./components/ForgotPass/Forgotpass";
 
 
 
@@ -78,6 +79,7 @@ function App() {
                         <Route path="/category/:title/:name" element={<SingleProduct Data={data} />} />
                         <Route path="/checkout" element={<Checkout />} />
                         <Route path="/trackorder" element={<Trackorder />} />
+                        <Route path="/forgotpassword" element={<Forgotpass />} />
                         
 
                     </Routes>

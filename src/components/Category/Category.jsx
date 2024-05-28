@@ -16,7 +16,7 @@ const Category = () => {
 
 
 
-const{data} = useContext(MyContext)
+    const { data } = useContext(MyContext)
 
     const [sortOrder, setSortOrder] = useState("");
 
@@ -26,7 +26,7 @@ const{data} = useContext(MyContext)
 
     const sortedProducts = data.map((Item) => {
         const sortedVariants = [...Item.product_container].sort((a, b) => {
-            return sortOrder === 'asc' ? a.product_price - b.product_price : sortOrder === 'desc' ? b.product_price - a.product_price : sortOrder === 'rating' ? b.count - a.count:null
+            return sortOrder === 'asc' ? a.product_price - b.product_price : sortOrder === 'desc' ? b.product_price - a.product_price : sortOrder === 'rating' ? b.count - a.count : null
 
         });
 
@@ -45,10 +45,10 @@ const{data} = useContext(MyContext)
 
 
 
-   
 
 
-  
+
+
 
 
 
@@ -99,7 +99,7 @@ const{data} = useContext(MyContext)
                                                 return (
 
 
-                                                  <MainProduct Data={Data2}  Item = {Item}/>
+                                                    <MainProduct Data={Data2} Item={Item} />
                                                 )
                                             })
                                     }

@@ -265,7 +265,7 @@ setLoader(true)
 try {
   
 
- const response =  await fetch("https://updated-backend-brown.vercel.app/forgotpass",{
+ const response =  await fetch("https://updated-backend-brown.vercel.app/forgotpassword",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
