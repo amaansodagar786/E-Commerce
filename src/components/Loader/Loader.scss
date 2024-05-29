@@ -1,47 +1,8 @@
-//Loader.scss
-
-
-.loader-containern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.155);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-  }
-  
-  .loader-containern.loading {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  
-  
-  
-  
-  .loader-ring {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 6px solid rgba(0, 0, 0, 0.1);
-    border-top-color: #da0808;
-    animation: spin 1s infinite linear;
-    background-color: black;
-    padding: 20px;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f0;
+}

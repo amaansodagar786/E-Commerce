@@ -24,6 +24,7 @@ import Yourorders from "./Authentication/Account/Accountinfo/Yourorders";
 import Youraddress from "./Authentication/Account/Accountinfo/Youraddress";
 import Trackorder from "./Authentication/Account/Accountinfo/Trackorder";
 import Forgotpass from "./components/ForgotPass/Forgotpass";
+import Loader from "./components/Loader/Loader";
 
 
 
@@ -57,11 +58,12 @@ function App() {
 
 
 
-                {isLoading && <Load />}
+                {isLoading && <Loader />}
                 <MyContextProvider>
 
-                    {loader && <Load />}
+                    
                     <Header />
+                    
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/contact" element={<Conatct setLoader={setLoader} />} />
