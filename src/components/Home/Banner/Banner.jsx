@@ -13,7 +13,7 @@ const Banner = (props) => {
    autoPlay={props.deviceType !== "mobile" ? true : false}
    autoPlaySpeed={3000}
    centerMode={false}
-   removeArrowOnDeviceType={["tablet", "mobile"]}
+  //  removeArrowOnDeviceType={["tablet", "mobile"]}
 //    customTransition="all .5"
   transitionDuration={500}
  
