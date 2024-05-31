@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const CartItem = () => {
 
-    const {data,handleNavigate,cartItems,setCartItems,closeModal2,removeProductFromCart,handleIncreaseQuantity,handleDecreaseQuantity} = useContext(MyContext)
+    const {increaseload,decreaseload,data,handleNavigate,cartItems,setCartItems,closeModal2,removeProductFromCart,handleIncreaseQuantity,handleDecreaseQuantity} = useContext(MyContext)
     const Navigate = useNavigate()
     const [loading, setLoading] = useState(false);
 

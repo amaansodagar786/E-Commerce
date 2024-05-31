@@ -11,12 +11,12 @@ import GoToTop from "./components/useLocation/UseLocation-up";
 
 import Account from "./components/Categories/Categories";
 import MyContextProvider from "./Uttis/MyContextProvider";
-import Load from "./components/Loader/Loader";
+// import Load from "./components/Loader/Loader";
 import Checkout from "./components/Checkout/Checkout";
 import RegisterForm from "./Register";
 import NoPage from "./components/NoPage/NoPage";
 import { ImArrowUp } from "react-icons/im";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MyContext from "./Uttis/MyContext";
 import Profile from "./Authentication/Account/Account";
 import Youraccount from "./Authentication/Account/Accountinfo/Youraccount";
@@ -31,36 +31,31 @@ import Loader from "./components/Loader/Loader";
 
 function App() {
 
-    const [loader, setLoader] = useState(false)
+    const [loader, setLoader] = useState(true)
     const data = useContext(MyContext)
-    const isLoading = useContext(MyContext)
+    const {isLoading, increaseload,decreaseload} = useContext(MyContext)
 
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoader(false);
+        }, 3000);
 
+        return () => clearTimeout(timer);
+    }, []);
 
 
     return (
-        <>
-
-
-
-
-
-
-
-
-
-
-
+        
 
             <BrowserRouter>
 
-
-
-
-                {isLoading && <Loader />}
+            {loader &&  <Loader />}
+            {increaseload &&  <Loader />}
+            {decreaseload &&  <Loader />}
                 <MyContextProvider>
-
+                {!loader && (
+                    <>
                     
                     <Header />
                     
@@ -92,11 +87,12 @@ function App() {
 
 
                     <GoToTop />
-
+                    </>
+                )}
                 </MyContextProvider>
             </BrowserRouter>
 
-        </>
+        
     )
 }
 

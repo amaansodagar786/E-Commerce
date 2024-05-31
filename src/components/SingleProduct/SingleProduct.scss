@@ -112,11 +112,13 @@
                 .sizebtn {
                     display: flex;
                     gap: 10px;
+
                     background-color: white;
                     color: black;
 
 
                     button {
+                        width: 10%;
                         border: 1px solid black;
                         color: black;
                     }
