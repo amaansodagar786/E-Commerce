@@ -33,7 +33,7 @@ function App() {
 
     const [loader, setLoader] = useState(true)
     const data = useContext(MyContext)
-    const {isLoading, increaseload,decreaseload} = useContext(MyContext)
+    const isLoading = useContext(MyContext)
 
 
     useEffect(() => {
@@ -51,8 +51,6 @@ function App() {
             <BrowserRouter>
 
             {loader &&  <Loader />}
-            {increaseload &&  <Loader />}
-            {decreaseload &&  <Loader />}
                 <MyContextProvider>
                 {!loader && (
                     <>

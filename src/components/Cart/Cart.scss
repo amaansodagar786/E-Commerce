@@ -152,3 +152,11 @@
     100%{transform: translateX(0%);}
 
 }
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  

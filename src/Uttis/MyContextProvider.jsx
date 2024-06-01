@@ -373,12 +373,11 @@ const removeProductFromCart = async (productId) => {
   } catch (error) {
     console.error('Error removing from cart:', error);
     // Handle error
-  }
+  } 
 };
-
-const [increaseload, setIncreaseload] = useState('false')
+const [increase , setIncrease] = useState(false)
 const handleIncreaseQuantity = async (productId, quantity) => {
-  setIncreaseload(true);
+  setIncrease(true)
  
   try {
     const token = sessionStorage.getItem('token');
@@ -406,26 +405,24 @@ const handleIncreaseQuantity = async (productId, quantity) => {
 
      
       setCartItems(data.cartItems)
+      setIncrease(false)
+
      
      
       
 
     }
   } else {
-  
+    // Quantity is already 1, cannot decrease further
     alert('Quantity cannot be increased further');
   }
   } catch (error) {
-    console.error('Error Adding in cart:', error);
-    setIncreaseload(false);
+    console.error('Error removing from cart:', error);
+    setIncrease(false)
   }
 };
 
-
-const [decreaseload, setDecreaseload] = useState('false')
-
 const handleDecreaseQuantity = async (productId, quantity) => {
-  setDecreaseload(true) ;
   try {
     const token = sessionStorage.getItem('token');
     if (!token) {
@@ -447,16 +444,15 @@ const handleDecreaseQuantity = async (productId, quantity) => {
       const data = await response.json();
       if (data.success) {
         setCartItems(data.cartItems);
-        setDecreaseload(false) ;
         
       }
     } else {
-      
+      // Quantity is already 1, cannot decrease further
       alert('Quantity cannot be decreased further');
     }
   } catch (error) {
     console.error('Error decreasing quantity:', error);
-    
+    // Handle error
   }
 };
 
@@ -667,7 +663,7 @@ function generateCaptcha() {
 
 
   return (
-    <MyContext.Provider value={{increaseload,decreaseload,captchamsg,setCaptchamsg,inputText,setInputText,captcha,setCaptcha,setStatusinfo, statusinfo,trackinfo,setTrackinfo,selectedProductId,setSelectedProductId,selectedSize,setSelectedSize,isSizeSelected,setIsSizeSelected,   ForgotHide,BothHide,hover,setHover,cursorPosition ,setCursorPosition,product,setProduct,allProducts,setAllProducts,isLoading,message,setMessage,setshippingInfo,shippingInfo,handleBuy,handleWish,loading,handleCheckout,wishItems,setWishItems,cartItems,setCartItems,token,handleLogin,userdata,setUserData,handleLogout,login,setLogin,loader,setLoader,LoginHide,RegisterHide,isAuthenticated,setIsAuthenticated,openModal4,closeModal4,showLogin,setShowLogin,AddToPrice,cartValue,isProductInCart,productremoved,currentStep,handleNext,handlePrev,data,handleNavigate,isProductInWish,formatReviewCount,removeProductFromWish,HeadingText,HeadingText1,showCart,setShowCart,removeProductFromCart,handleIncreaseQuantity,handleDecreaseQuantity,TotalValue,showWishList,setShowWishList,openModal,closeModal,openModal1,closeModal1,showSearch,closeModal2,openModal2,}} >
+    <MyContext.Provider value={{increase,captchamsg,setCaptchamsg,inputText,setInputText,captcha,setCaptcha,setStatusinfo, statusinfo,trackinfo,setTrackinfo,selectedProductId,setSelectedProductId,selectedSize,setSelectedSize,isSizeSelected,setIsSizeSelected,   ForgotHide,BothHide,hover,setHover,cursorPosition ,setCursorPosition,product,setProduct,allProducts,setAllProducts,isLoading,message,setMessage,setshippingInfo,shippingInfo,handleBuy,handleWish,loading,handleCheckout,wishItems,setWishItems,cartItems,setCartItems,token,handleLogin,userdata,setUserData,handleLogout,login,setLogin,loader,setLoader,LoginHide,RegisterHide,isAuthenticated,setIsAuthenticated,openModal4,closeModal4,showLogin,setShowLogin,AddToPrice,cartValue,isProductInCart,productremoved,currentStep,handleNext,handlePrev,data,handleNavigate,isProductInWish,formatReviewCount,removeProductFromWish,HeadingText,HeadingText1,showCart,setShowCart,removeProductFromCart,handleIncreaseQuantity,handleDecreaseQuantity,TotalValue,showWishList,setShowWishList,openModal,closeModal,openModal1,closeModal1,showSearch,closeModal2,openModal2,}} >
       {children}
     </MyContext.Provider>
   )

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const CartItem = () => {
 
-    const {increaseload,decreaseload,data,handleNavigate,cartItems,setCartItems,closeModal2,removeProductFromCart,handleIncreaseQuantity,handleDecreaseQuantity} = useContext(MyContext)
+    const {increase,data,handleNavigate,cartItems,setCartItems,closeModal2,removeProductFromCart,handleIncreaseQuantity,handleDecreaseQuantity} = useContext(MyContext)
     const Navigate = useNavigate()
     const [loading, setLoading] = useState(false);
 
@@ -105,7 +105,7 @@ const CartItem = () => {
                             
 
                             <span onClick={() => handleDecreaseQuantity(Item.productId,Item.quantity)}>-</span>
-                            <span>{Item.quantity}</span>
+                            {increase ? <span>Loading</span> : <span>{Item.quantity}</span>}
                             <span onClick={() => handleIncreaseQuantity(Item.productId,Item.quantity)}> {loading ? '' : '+'}</span>
 
                            
