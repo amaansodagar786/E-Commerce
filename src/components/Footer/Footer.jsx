@@ -65,7 +65,7 @@ const Footer = () => {
     <div className="bottom-bar">
         <div className="bottom-bar-content">
             <div className="text">
-                VRX View 2023. PREMIUM E-COMERCE SOLUTION.
+                 PREMIUM E-COMERCE SOLUTION.
             </div>
             <img src={Payment} alt=""/>
         </div>
