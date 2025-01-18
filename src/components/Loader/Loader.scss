@@ -2,7 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100vw;
-  background-color: #f0f0f0;
+  height: 100vh; /* Full-page height */
+  width: 100vw; /* Full-page width */
+  background-color: #f0f0f0; /* Light background for better contrast */
+}
+
+.spinner {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #36d7b7; /* Accent color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
